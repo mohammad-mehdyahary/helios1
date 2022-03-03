@@ -23,6 +23,7 @@ class CreatePaymentzTable extends Migration
             $table->string('ship_city')->nullable();
             $table->string('ship_city1')->nullable();
             $table->string('ship_zip')->nullable();
+            $table->integer('price');
             $table->timestamps();
         });
     }
