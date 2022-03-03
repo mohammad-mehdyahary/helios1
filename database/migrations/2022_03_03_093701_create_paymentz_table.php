@@ -16,13 +16,13 @@ class CreatePaymentzTable extends Migration
         Schema::create('paymentz', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('order_id');
-            $table->string('ship_name')->nullable();
-            $table->string('ship_phone')->nullable();
-            $table->string('ship_email')->nullable();
-            $table->string('ship_address')->nullable();
-            $table->string('ship_city')->nullable();
-            $table->string('ship_city1')->nullable();
-            $table->string('ship_zip')->nullable();
+            $table->string('name')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('email')->nullable();
+            $table->string('address')->nullable();
+            $table->string('city')->nullable();
+            $table->string('city1')->nullable();
+            $table->string('zip')->nullable();
             $table->integer('price');
             $table->timestamps();
         });
