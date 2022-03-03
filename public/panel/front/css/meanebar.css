@@ -1,0 +1,11 @@
+.mnu_triger_tet_input {
+    border: none;
+    outline: none;
+    width: 8.2rem;
+    height: 2.9rem;
+    border-radius: 2px;
+    direction: rtl;
+    padding: 6px;
+    margin-top: 5px;
+    
+}
