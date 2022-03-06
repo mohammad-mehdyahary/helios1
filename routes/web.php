@@ -186,3 +186,7 @@ Route::get('all/message', [App\Http\Controllers\ContactController::class, 'AllMe
 Route::post('product/search', [App\Http\Controllers\CartController::class, 'ProductSearch'])->name('product.search');
 
 // zarinpal
+Route::get('buy',function(){return view('shop');});
+
+Route::get('order', [App\Http\Controllers\siteController::class, 'order']);
+Route::post('shop',[App\Http\Controllers\siteController::class, 'add_order']);

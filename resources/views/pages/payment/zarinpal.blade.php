@@ -13,7 +13,7 @@ $cart = Cart::Content();
 <link rel="stylesheet" href="{{ asset('public/panel/front/css/main.css') }}">
 <link rel="stylesheet" href="{{ asset('public/panel/front/css/util.css') }}">
 
-<style>
+{{-- <style>
   .text-center {
       text-align: center;
   }
@@ -62,10 +62,12 @@ $cart = Cart::Content();
             transform: scale(1.0);
         }
   }
-</style>
+</style> --}}
+
+  
 
  <!-- wrapper -->
- <div class="container-login100" >
+   <div class="container-login100" >
 		<div class=" col-lg-4">
 			
 				<span class="login100-form-title p-b-37">
@@ -141,8 +143,8 @@ $cart = Cart::Content();
     
   </li>
  
-</ol>
-@endforeach
+             </ol>
+                      @endforeach
 
                         <ul class="list-group col-lg-12" style="">
                         @if(Session::has('coupon'))
@@ -167,14 +169,14 @@ $cart = Cart::Content();
 		</div>
     <div class="col-lg-6">
 
-      {{-- <form method="post" action="{{url('shop')}}" style="width: 25rem;display:flex;justify-content: center;">
+      <form method="post" action="{{url('shop')}}" style="width: 25rem;display:flex;justify-content: center;">
         {{csrf_field()}}
-        <input type="hidden" name="price" value="{{ Cart::Subtotal() + $charge + $vat }}">
+        <input type="text" name="price" value="{{ Cart::Subtotal() + $charge + $vat }}">
         <button type="submit" style="background: #2546eb;padding:12px;border-radius: 10px;width:70%;color:#ffffff;">تکمیل خرید</button>
-      </form> --}}
+      </form>
 
 
-      <form class="text-center mt-2" method="post" action="{{ route('stripe.charge') }}">@csrf
+      {{-- <form class="text-center mt-2" method="post" action="{{ route('stripe.charge') }}">@csrf
         <p>ارسال به ارائه دهنده پرداخت امن</p>
         <p>
           اگر به طور خودکار به وب سایت پرداخت هدایت نشدید
@@ -187,7 +189,7 @@ $cart = Cart::Content();
         @endforeach
 
         <button type="submit" style="background: #2546eb;padding:12px;border-radius: 10px;width:70%;color:#ffffff;margin-top:1rem;">تکمیل خرید</button>
-    </form>
+    </form> --}}
     
     </div>
 		{{-- <div class=" col-lg-7">
@@ -219,6 +221,7 @@ $cart = Cart::Content();
 	
 
 	<div id="dropDownSelect1"></div>
+
   <script>
     // Total seconds to wait
     var seconds = 10;

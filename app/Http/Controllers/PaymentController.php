@@ -39,16 +39,16 @@ class PaymentController extends Controller
     public function ZarinCharge(Request $request)
     {
         $email = Auth::user()->email;
-        $total = $request->total;
-        $invoice = new Invoice();
-        $invoice -> amount($request->total);
+        // $total = $request->total;
+        // $invoice = new Invoice();
+        // $invoice -> amount($request->total);
 
-        $payment = Payment::callbackUrl(route('pages.payment.zarinpal',compact('invoice')));
+        // $payment = Payment::callbackUrl(route('pages.payment.zarinpal',compact('invoice')));
 
-        $payment->purchase($invoice, function($dirver,$transactionId){
+        // $payment->purchase($invoice, function($dirver,$transactionId){
 
-        });
-        return $payment->pay()->render();
+        // });
+        // return $payment->pay()->render();
 
 
         $data = array();
